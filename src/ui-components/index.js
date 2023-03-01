@@ -26,6 +26,7 @@ export { default as Features4x1 } from "./Features4x1";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as Ampligram } from "./Ampligram";
 export { default as HeroLayout2 } from "./HeroLayout2";
+export { default as Pets } from "./Pets";
 export { default as EditProfile } from "./EditProfile";
 export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as MyIcon } from "./MyIcon";

@@ -38,6 +38,8 @@ export default function ProfileCard(props) {
       {...rest}
     >
       <Button
+        width="unset"
+        height="unset"
         border="1px SOLID rgba(245,188,188,1)"
         shrink="0"
         size="default"
@@ -170,6 +172,8 @@ export default function ProfileCard(props) {
         ></Text>
       </Flex>
       <Button
+        width="unset"
+        height="unset"
         shrink="0"
         alignSelf="stretch"
         size="large"
@@ -179,6 +183,8 @@ export default function ProfileCard(props) {
         {...getOverrideProps(overrides, "Button29766907")}
       ></Button>
       <Button
+        width="unset"
+        height="unset"
         shrink="0"
         size="default"
         isDisabled={false}
