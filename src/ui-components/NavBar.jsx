@@ -142,6 +142,7 @@ export default function NavBar(props) {
           borderRadius="160px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
+          src="https://ecloud.eos-guangzhou-1.cmecloud.cn/op-node-portal-web/static/images/home/hot-new/hot-recommend.png"
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>
