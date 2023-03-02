@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
+import { Button, Flex, Grid, Text, TextField } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Pet } from "../models";
 import { fetchByPath, validateField } from "./utils";
@@ -130,6 +130,10 @@ export default function PetCreateForm(props) {
       {...getOverrideProps(overrides, "PetCreateForm")}
       {...rest}
     >
+      <Text
+        children="Add Pet"
+        {...getOverrideProps(overrides, "SectionalElement0")}
+      ></Text>
       <TextField
         label="Name"
         isRequired={true}

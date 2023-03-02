@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import '@aws-amplify/ui-react/styles.css';
 
-import { NavBar, Pets, MarketingFooter, ProfileCard } from './ui-components';
+import { NavBar, Pets, MarketingFooter, ProfileCard, PetDetail } from './ui-components';
 
 function App() {
   const petProfileOverride = {
@@ -13,6 +13,7 @@ function App() {
       <div className="App">
         <NavBar width={"100%"}></NavBar>
         <header>
+          <PetDetail/>
           <Pets overrideItems={ ({item,index})=>({
             overrides: {
               About: {color:"blue"},
@@ -22,7 +23,7 @@ function App() {
                 }
               }
             }
-          }) } itemsPerPage={1} currentPage={2} style={{
+          }) } itemsPerPage={3} currentPage={1} style={{
             textAlign: "center",
             margin: "12px"
           }}></Pets>
