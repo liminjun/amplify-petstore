@@ -1,14 +1,15 @@
 import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import '@aws-amplify/ui-react/styles.css';
-import { useState } from 'react';
 
-import { NavBar, Pets, MarketingFooter, ProfileCard, PetDetail } from './ui-components';
-import { set } from 'lodash';
+import { NavBar, Pets, MarketingFooter, ProfileCard, PetCreateForm, PetDetail } from './ui-components';
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+
   const petProfileOverride = {
-    Breed: {color:"blue"}
+    Breed: { color: "blue" }
   }
   const [showDetails, setShowDetials] = useState(false);
   const [pet, setPet] = useState({});
@@ -19,10 +20,21 @@ function App() {
   const [breed, setBreed] = useState("");
   const [about, setAbout] = useState("");
   const [image, setImage] = useState("");
+  const navbarOverride = {
+    "Add Pet": {
+      style: {
+        cursor: "pointer"
+      },
+      onClick: () => {
+        alert("Add Pet");
+        setShowForm(!showForm);
+      }
+    }
+  }
   return (
     <>
       <div className="App">
-        <NavBar width={"100%"}></NavBar>
+        <NavBar width={"100%"} overrides={navbarOverride}></NavBar>
         <header>
           {
             showDetails && <PetDetail pet={pet} overrides={{
@@ -34,11 +46,16 @@ function App() {
                   cursor: "pointer"
                 }
               }
-            }}/>
+            }} />
           }
-          <Pets overrideItems={ ({item,index})=>({
+
+          <PetDetail />
+          {showForm && (
+            <PetCreateForm />
+          )}
+          <Pets overrideItems={({ item, index }) => ({
             overrides: {
-              About: {color:"blue"},
+              About: { color: "blue" },
               Button29766907: {
                 onClick: () => {
                   alert(`${item.name}`);
@@ -62,13 +79,12 @@ function App() {
                 }
               }
             }
-          }) } itemsPerPage={3} currentPage={1} style={{
+          })} itemsPerPage={10} currentPage={1} style={{
             textAlign: "center",
             margin: "12px"
           }}></Pets>
           {/* <ProfileCard overrides={petProfileOverride} /> */}
         </header>
-
 
         <MarketingFooter width={"100%"} />
       </div>
