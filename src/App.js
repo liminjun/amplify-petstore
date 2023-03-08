@@ -5,7 +5,9 @@ import '@aws-amplify/ui-react/styles.css';
 
 import { NavBar, Pets, MarketingFooter, ProfileCard, PetCreateForm, PetDetail } from './ui-components';
 
-function App() {
+import { withAuthenticator } from '@aws-amplify/ui-react';
+
+function App({user, signOut}) {
   const [showForm, setShowForm] = useState(false);
 
   const petProfileOverride = {
@@ -21,6 +23,15 @@ function App() {
   const [about, setAbout] = useState("");
   const [image, setImage] = useState("");
   const navbarOverride = {
+    btnLogin: {
+      onClick: () => {
+        signOut()
+      }
+    },
+    image: {
+      src: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+      // src: user?.atrributes?.profile
+    },
     "Add Pet": {
       style: {
         cursor: "pointer"
@@ -79,7 +90,7 @@ function App() {
                 }
               }
             }
-          })} itemsPerPage={10} currentPage={1} style={{
+          })} itemsPerPage={3} currentPage={1} style={{
             textAlign: "center",
             margin: "12px"
           }}></Pets>
@@ -92,4 +103,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

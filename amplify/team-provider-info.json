@@ -10,6 +10,11 @@
       "StackName": "amplify-amplifypetstore-staging-42425",
       "StackId": "arn:aws:cloudformation:us-east-1:414368941150:stack/amplify-amplifypetstore-staging-42425/1f0f4110-b3fb-11ed-b4d5-0e8c805f8db9",
       "AmplifyAppId": "d26gf3rb2knris"
+    },
+    "categories": {
+      "auth": {
+        "amplifypetstore": {}
+      }
     }
   }
 }

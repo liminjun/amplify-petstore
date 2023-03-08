@@ -6,19 +6,19 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, IconProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
+import { ButtonProps, FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavBarOverridesProps = {
-    NavBar?: PrimitiveOverrideProps<FlexProps>;
-    Logo29767073?: PrimitiveOverrideProps<FlexProps>;
-    "Star 1"?: PrimitiveOverrideProps<IconProps>;
-    Logo29767075?: PrimitiveOverrideProps<TextProps>;
+    NavBar?: PrimitiveOverrideProps<ViewProps>;
     "Frame 32129767076"?: PrimitiveOverrideProps<FlexProps>;
     "Add Pet"?: PrimitiveOverrideProps<TextProps>;
+    "Frame 322"?: PrimitiveOverrideProps<FlexProps>;
+    UserName?: PrimitiveOverrideProps<TextProps>;
+    btnLogin?: PrimitiveOverrideProps<ButtonProps>;
     "Frame 32129767081"?: PrimitiveOverrideProps<FlexProps>;
     image?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
-export declare type NavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type NavBarProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: NavBarOverridesProps | undefined | null;
 }>;
 export default function NavBar(props: NavBarProps): React.ReactElement;
