@@ -42,8 +42,8 @@
         },
         "signupAttributes": [
           "EMAIL",
-          "NAME",
-          "PROFILE"
+          "PROFILE",
+          "NAME"
         ],
         "socialProviders": [],
         "usernameAttributes": [],
@@ -53,6 +53,13 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "storage": {
+    "s3amplifypetstorestorage75c577cb": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }
