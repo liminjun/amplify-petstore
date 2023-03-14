@@ -90,7 +90,7 @@ function App({user, signOut}) {
                 }
               }
             }
-          })} itemsPerPage={3} currentPage={1} style={{
+          })} itemsPerPage={4} currentPage={1} style={{
             textAlign: "center",
             margin: "12px"
           }}></Pets>

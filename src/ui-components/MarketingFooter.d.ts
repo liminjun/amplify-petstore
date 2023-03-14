@@ -6,28 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, TextFieldProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type MarketingFooterOverridesProps = {
     MarketingFooter?: PrimitiveOverrideProps<ViewProps>;
     "Rectangle 738"?: PrimitiveOverrideProps<ViewProps>;
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna"?: PrimitiveOverrideProps<TextProps>;
-    "Frame 405"?: PrimitiveOverrideProps<FlexProps>;
-    "Frame 403"?: PrimitiveOverrideProps<FlexProps>;
-    "Lorem ipsum dolor sit amet29766990"?: PrimitiveOverrideProps<TextProps>;
-    "Consectetur adipiscing29766991"?: PrimitiveOverrideProps<TextProps>;
-    "Elit sed do eiusmod29766992"?: PrimitiveOverrideProps<TextProps>;
-    "Tempor incididunt ut labore"?: PrimitiveOverrideProps<TextProps>;
-    "Et dolore magna"?: PrimitiveOverrideProps<TextProps>;
-    "Frame 404"?: PrimitiveOverrideProps<FlexProps>;
-    "Lorem ipsum dolor sit amet29766996"?: PrimitiveOverrideProps<TextProps>;
-    "Consectetur adipiscing29766997"?: PrimitiveOverrideProps<TextProps>;
-    "Elit sed do eiusmod29766998"?: PrimitiveOverrideProps<TextProps>;
-    "Lorem ipsum dolor sit amet 2021"?: PrimitiveOverrideProps<TextProps>;
-    "Frame 313"?: PrimitiveOverrideProps<FlexProps>;
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"?: PrimitiveOverrideProps<TextProps>;
-    TextField?: PrimitiveOverrideProps<TextFieldProps>;
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."?: PrimitiveOverrideProps<TextProps>;
+    "2011-2023 All right served."?: PrimitiveOverrideProps<TextProps>;
+    "\u672C\u7F51\u7AD9\u57FA\u4E8EAWS Amplify\u6784\u5EFA"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type MarketingFooterProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: MarketingFooterOverridesProps | undefined | null;
